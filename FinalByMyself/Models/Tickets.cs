@@ -30,4 +30,16 @@
 
         }
     }
+    public enum TicketStatus
+    {
+
+    }
+    public enum TicketPriorties
+    {
+
+    }
+    public enum TicketTypes
+    {
+
+    }
 }
