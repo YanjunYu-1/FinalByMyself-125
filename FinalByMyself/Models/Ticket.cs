@@ -13,9 +13,9 @@
         //Tickets与Project,TicketTypes,TicketPriorties，TicketStatus  many to one
         public int ProjectId { get; set; }
         public Project? Project { get; set; }
-        public string TicketTypeId { get; set; }
-        public string TicketPriorityId { get; set; }//优先级
-        public string TicketStatusId { get; set; }//状态
+        public string TicketType { get; set; }
+        public string TicketPriority { get; set; }//优先级
+        public string TicketStatus { get; set; }//状态
 
         //Q1 为什么有的是int有的是string=>UserId需要手动编写，前面会添加部门等信息例如XSK001（销售科001）
 
