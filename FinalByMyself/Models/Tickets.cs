@@ -8,10 +8,15 @@
         public DateTime Created { get; set; }
         public DateTime Updated { get; set; }
         public int ProjectId { get; set; }
+
+        //Tickets与TicketTypes,TicketPriorties，TicketStatus  many to one
         public int TicketTypeId { get; set; }
+        public TicketTypes TicketTypes { get; set; }
         public int TicketPriorityId { get; set; }//优先级
-        //Q1 为什么有的是int有的是string=>UserId需要手动编写，前面会添加部门等信息例如XSK001（销售科001）
+        public TicketPriorties TicketPriorties { get; set; }
         public int TicketStatusId { get; set; }//状态
+        public TicketStatus TicketStatus { get; set; }
+        //Q1 为什么有的是int有的是string=>UserId需要手动编写，前面会添加部门等信息例如XSK001（销售科001）
 
         //Tickets与AppUser  many to one
         public string OwnerUserId { get; set; }//所有者
