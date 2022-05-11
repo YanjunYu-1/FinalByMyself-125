@@ -44,14 +44,23 @@
     }
     public enum TicketStatus
     {
-
+        Submitted,//提交，
+        Asssigned,//已分配，
+        Progressing,//进行中
+        Resorved//保留
     }
     public enum TicketPriorties
     {
-
+        High,//高
+        Medium,//中
+        Low//低
     }
     public enum TicketTypes
     {
-
+        GeneralQuestion,//一般问题，
+        BugReport,//错误报告，
+        PaymentIssue,//付款问题，
+        TechIssue,//技术问题，
+        AccountIssue//帐户问题
     }
 }
