@@ -1,6 +1,6 @@
 ﻿namespace FinalByMyself.Models
 {
-    public class Tickets
+    public class Ticket
     {
         public int Id { get; set; }
         public string Title { get; set; }
@@ -28,17 +28,17 @@
 
 
         //Tickets与TicketAttachments,TicketComments,TicketHistory,TicketNotifications  one to many
-        public ICollection<TicketAttachments> TicketAttachments { get; set; }
-        public ICollection<TicketComments> TicketComments { get; set; }
+        public ICollection<TicketAttachment> TicketAttachments { get; set; }
+        public ICollection<TicketComment> TicketComments { get; set; }
         public ICollection<TicketHistory> TicketHistories { get; set; }
-        public ICollection<TicketNotifications> TicketNotifications { get; set; }
-        public Tickets()
+        public ICollection<TicketNotification> TicketNotifications { get; set; }
+        public Ticket()
         {
             ;//对于每一个one to many建立联系后需要new
-            TicketAttachments = new HashSet<TicketAttachments>();
-            TicketComments = new HashSet<TicketComments>();
+            TicketAttachments = new HashSet<TicketAttachment>();
+            TicketComments = new HashSet<TicketComment>();
             TicketHistories = new HashSet<TicketHistory>();
-            TicketNotifications = new HashSet<TicketNotifications>();
+            TicketNotifications = new HashSet<TicketNotification>();
 
         }
     }

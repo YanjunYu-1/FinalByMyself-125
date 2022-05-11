@@ -1,6 +1,6 @@
 ﻿namespace FinalByMyself.Models
 {
-    public class TicketComments
+    public class TicketComment
     {
         public int Id { get; set; }
         public string Comment { get; set; }
@@ -13,7 +13,7 @@
 
         //TicketComments与Tickets  many to one
         public int TicketsId { get; set; }
-        public Tickets ticket { get; set; }
+        public Ticket ticket { get; set; }
 
 
     }

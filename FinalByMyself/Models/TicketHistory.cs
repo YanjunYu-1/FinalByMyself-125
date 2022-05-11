@@ -14,7 +14,7 @@
 
         //TicketHistory与Tickets  many to one
         public int TicketId { get; set; }
-        public Tickets Ticket { get; set; }
+        public Ticket Ticket { get; set; }
 
     }
 }

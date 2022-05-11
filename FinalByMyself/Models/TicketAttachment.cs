@@ -1,6 +1,6 @@
 ﻿namespace FinalByMyself.Models
 {
-    public class TicketAttachments//跟踪的附件
+    public class TicketAttachment//跟踪的附件
     {
         public int Id { get; set; }
         public string TicketId { get; set; }
@@ -15,6 +15,6 @@
 
         //TicketAttachments与Tickets  many to one
         public int TicketsId { get; set; }
-        public Tickets ticket { get; set; }
+        public Ticket ticket { get; set; }
     }
 }
