@@ -10,6 +10,7 @@
         public int ProjectId { get; set; }
         public int TicketTypeId { get; set; }
         public int TicketPriorityId { get; set; }//优先级
+        //Q1 为什么有的是int有的是string
         public int TicketStatusId { get; set; }//状态
         public string OwnerUserId { get; set; }//所有者
         public string AssignedToUserId { get; set; }//分配给用户
