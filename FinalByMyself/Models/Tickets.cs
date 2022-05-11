@@ -12,8 +12,13 @@
         public int TicketPriorityId { get; set; }//优先级
         //Q1 为什么有的是int有的是string=>UserId需要手动编写，前面会添加部门等信息例如XSK001（销售科001）
         public int TicketStatusId { get; set; }//状态
+
+        //Tickets与AppUser  many to one
         public string OwnerUserId { get; set; }//所有者
+        public AppUser OwnerUser { get; set; }
         public string AssignedToUserId { get; set; }//分配给用户
+        public AppUser AssignedToUser { get; set; }
+
 
         //Tickets与TicketAttachments,TicketComments,TicketHistory,TicketNotifications  one to many
         public ICollection<TicketAttachments> TicketAttachments { get; set; }
