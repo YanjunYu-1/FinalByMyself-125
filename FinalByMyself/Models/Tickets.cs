@@ -15,12 +15,15 @@
         public string OwnerUserId { get; set; }//所有者
         public string AssignedToUserId { get; set; }//分配给用户
 
-        //Tickets与TicketAttachments  one to many
+        //Tickets与TicketAttachments,TicketComments  one to many
         public ICollection<TicketAttachments> TicketAttachments { get; set; }
+        public ICollection<TicketComments> TicketComments { get; set; }
         public Tickets()
         {
             ;//对于每一个one to many建立联系后需要new
-            TicketAttachments =new HashSet<TicketAttachments>()
+            TicketAttachments = new HashSet<TicketAttachments>();
+            TicketComments = new HashSet<TicketComments>();
+
         }
     }
 }
