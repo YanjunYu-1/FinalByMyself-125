@@ -7,24 +7,25 @@
         public string Description { get; set; }
         public DateTime Created { get; set; }
         public DateTime Updated { get; set; }
+
+        //Q2 此处是否需要添加many to one的关系，类型是否应该是int，队友写的是string
+
+        //Tickets与Project,TicketTypes,TicketPriorties，TicketStatus  many to one
         public int ProjectId { get; set; }
-
-        //Q1 此处是否需要添加many to one的关系，类型是否应该是int，队友写的是string
-
-        //Tickets与TicketTypes,TicketPriorties，TicketStatus  many to one
-        public int TicketTypeId { get; set; }
+        public Project? Project { get; set; }
+        public string TicketTypeId { get; set; }
         public TicketTypes TicketTypes { get; set; }
-        public int TicketPriorityId { get; set; }//优先级
+        public string TicketPriorityId { get; set; }//优先级
         public TicketPriorties TicketPriorties { get; set; }
-        public int TicketStatusId { get; set; }//状态
+        public string TicketStatusId { get; set; }//状态
         public TicketStatus TicketStatus { get; set; }
         //Q1 为什么有的是int有的是string=>UserId需要手动编写，前面会添加部门等信息例如XSK001（销售科001）
 
         //Tickets与AppUser  many to one
-        public string OwnerUserId { get; set; }//所有者
-        public AppUser OwnerUser { get; set; }
-        public string AssignedToUserId { get; set; }//分配给用户
-        public AppUser AssignedToUser { get; set; }
+        public string? OwnerUserId { get; set; }//所有者
+        public AppUser? OwnerUser { get; set; }
+        public string? AssignedToUserId { get; set; }//分配给用户
+        public AppUser? AssignedToUser { get; set; }
 
 
         //Tickets与TicketAttachments,TicketComments,TicketHistory,TicketNotifications  one to many

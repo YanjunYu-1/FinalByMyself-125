@@ -10,7 +10,7 @@ namespace FinalByMyself.Models
         public ICollection<TicketHistory> TicketHistory { get; set; }
         public ICollection<TicketNotification> TicketNotifications { get; set; }
 
-        [InverseProperty("OwnerUserId")]
+        [InverseProperty("OwnerUserId")]//两个类中存在两种联系，一般是用户有级别，例如，经理，主管，员工
         public ICollection<Ticket> OwnerUserId { get; set; }
 
         [InverseProperty("AssignedToUserId")]

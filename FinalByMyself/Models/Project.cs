@@ -9,7 +9,7 @@
         public ICollection<ProjectsUser> ProjectsUsers { get; set; }
         public Project()
         {
-            ProjectsUsers = new List<ProjectsUser>();
+            ProjectsUsers = new HashSet<ProjectsUser>();
         }
     }
 }
