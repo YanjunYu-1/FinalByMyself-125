@@ -14,11 +14,9 @@
         public int ProjectId { get; set; }
         public Project? Project { get; set; }
         public string TicketTypeId { get; set; }
-        public TicketTypes TicketTypes { get; set; }
         public string TicketPriorityId { get; set; }//优先级
-        public TicketPriorties TicketPriorties { get; set; }
         public string TicketStatusId { get; set; }//状态
-        public TicketStatus TicketStatus { get; set; }
+
         //Q1 为什么有的是int有的是string=>UserId需要手动编写，前面会添加部门等信息例如XSK001（销售科001）
 
         //Tickets与AppUser  many to one
@@ -46,9 +44,9 @@
     public enum TicketStatus
     {
         Submitted,//提交，
-        Asssigned,//已分配，
+        Assigned,//已分配，
         Progressing,//进行中
-        Resorved//保留
+        Reserved//保留
     }
     public enum TicketPriorties
     {
