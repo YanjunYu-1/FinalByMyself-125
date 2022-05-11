@@ -9,6 +9,8 @@
         public DateTime Updated { get; set; }
         public int ProjectId { get; set; }
 
+        //Q1 此处是否需要添加many to one的关系，类型是否应该是int，队友写的是string
+
         //Tickets与TicketTypes,TicketPriorties，TicketStatus  many to one
         public int TicketTypeId { get; set; }
         public TicketTypes TicketTypes { get; set; }
