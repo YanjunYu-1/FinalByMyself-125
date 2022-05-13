@@ -6,6 +6,7 @@
         void Create(T entity);
         T Get(T id);
 
+
         //Read
         T Get(Func<T, bool> func);
         ICollection<T> GetAll();
