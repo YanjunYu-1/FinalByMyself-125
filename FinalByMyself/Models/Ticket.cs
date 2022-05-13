@@ -47,7 +47,7 @@
         Submitted,//提交，
         Assigned,//已分配，
         Progressing,//进行中
-        Completed//保留-改了
+        Completed//完成的
     }
     public enum TicketPriorties
     {
