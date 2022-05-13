@@ -3,7 +3,7 @@
     public interface IDAL<T> where T : class
     {
         //Create
-        void Create(T entity);
+        void Add(T entity);
         T Get(T id);
 
 
